@@ -18,17 +18,26 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+      @media @mobile{
+        .sky, .launch{
+          display: none;
+        }
+      }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+        @media @mobile{
+          width: 100%;
+        }
     }
   }
 
   .visit-planets {
     padding: 15px;
+      
 
     h3 {
       margin-top: 11px;
@@ -45,9 +54,18 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+      @media @mobile{
+        flex-direction: column-reverse;
+        padding: 5% 4%;
+
+      }
 
     .walk-text {
       width: 50%;
+        @media @mobile{
+          width: 100%;
+          padding-top: 4%;
+        }
 
       h3 {
         margin-bottom: 10px;
@@ -60,7 +78,7 @@
       .btn {
         display: block;
         color: white;
-        background-color: black;
+        background-color: @btn-bg-color;
         cursor: pointer;
         width: 120px;
         height: 35px;
@@ -68,12 +86,25 @@
         border-radius: 5px;
         text-align: center;
         padding-top: 0.5%;
+        &:hover{
+          background-color: @navHover;
+          color: @butHover
+        }
+          @media @mobile{
+            width: 100%;
+            height: 70px;
+            font-size: 2rem;
+          }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+        @media @mobile{
+            width: 100%;
+            margin-left: 0;
+        }
       
       img {
         width: 100%;
@@ -88,26 +119,39 @@
 /*   Header   */
 
 .navTop{
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   height: 8rem;
   background-color: @nav-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
+    @media @mobile{
+      height: 10rem;
+      justify-content: space-between;
+    }
   .navTitle{
     font-size: 5rem;
   }
   nav{
-    width: 500px;
+    width: 450px;
     font-size: 2rem;
     display: flex;
     justify-content: space-between;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
+      @media @mobile{
+        width: 460px;
+      }
     a{
-      color: black;
+      color: @header-font-color;
       text-decoration: none;
     }
+
+    
   }
+}
+
+nav a:hover{
+  color: @navHover;
 }
 
 .imgEarth{
