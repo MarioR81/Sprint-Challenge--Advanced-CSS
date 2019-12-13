@@ -240,7 +240,7 @@ footer {
   color: white;
   background-color: #22283A;
   cursor: pointer;
-  width: 120px;
+  width: 115px;
   height: 35px;
   font-size: 1.7rem;
   border-radius: 5px;
@@ -248,8 +248,9 @@ footer {
   padding-top: 0.5%;
 }
 .home .walk .walk-text .btn:hover {
-  background-color: mediumturquoise;
-  color: midnightblue;
+  background-color: white;
+  color: #22283A;
+  borde: 2px solid #22283A;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn {
